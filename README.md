@@ -1,6 +1,6 @@
 # EasyDB4j
 
-A few types are still supported (strings and integers only) and also support for a few class types.
+A few types are still supported (strings,integers and timestamps only) and also support for a few class types.
 Born as a utility because light and ad hoc for the needs I have.
 #### Used the following libraries:
 - HikariCP : for jdbc pooling
