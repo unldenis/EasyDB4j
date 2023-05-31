@@ -22,6 +22,7 @@ public MyUser() { }
 }
 ```
 Generated this class in runtime(Decompiling with intellij):
+
 ```java
 //
 // Source code recreated from a .class file by IntelliJ IDEA
@@ -31,7 +32,7 @@ Generated this class in runtime(Decompiling with intellij):
 package com.github.unldenis.easydb4j;
 
 import com.github.unldenis.easydb4j.api.DataSource;
-import com.github.unldenis.easydb4j.api.IDB;
+import com.github.unldenis.easydb4j.api.DB;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -40,7 +41,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class EasyDBMyUser implements IDB<MyUser> {
+public class EasyDBMyUser implements DB<MyUser> {
+
   private final DataSource dS;
 
   public EasyDBMyUser(DataSource var1) {
@@ -53,7 +55,7 @@ public class EasyDBMyUser implements IDB<MyUser> {
     Statement var3 = this.statement();
     ResultSet var4 = var3.executeQuery(var2);
 
-    while(var4.next()) {
+    while (var4.next()) {
       MyUser var5 = new MyUser();
       var5.id = var4.getInt("id");
       var5.name = var4.getString("name");
